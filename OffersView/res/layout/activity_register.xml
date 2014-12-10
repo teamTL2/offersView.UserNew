@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Όνομα χρήστη"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/Register_email"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:hint="Username"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Κωδικός"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/Register_password"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:imeOptions="actionGo"
+                android:nextFocusDown="@+id/btnRegister"
+                android:hint="Password"
+                android:password="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Επαναπληκτρολόγηση κωδικού"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/Re_Register_password"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:imeOptions="actionGo"
+                android:nextFocusDown="@+id/btnRegister"
+                android:hint="Password"
+                android:password="true"
+                android:singleLine="true" />
+
+            
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/btnReturn"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Επιστροφή" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnReturn"
+                android:layout_alignBottom="@+id/btnReturn"
+                android:layout_toRightOf="@+id/btnReturn"
+                android:text="Εγγραφή" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
