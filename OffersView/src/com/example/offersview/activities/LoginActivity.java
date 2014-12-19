@@ -79,8 +79,11 @@ public class LoginActivity extends Activity{
 				// TODO Auto-generated method stub
 				if (!email.getText().toString().equals("") && !password.getText().toString().equals("")) {
 					
-					new LoginOperation(email.getText().toString(),password.getText().toString()).execute();
+					new LoginOperation(email.getText().toString(),password.getText().toString()).execute();	
+				}
+				else {
 					
+	        		Toast.makeText(getApplicationContext(), "Παρακαλώ συμπληρώστε όλα τα πεδία", Toast.LENGTH_SHORT).show();
 				}
 
 			}
@@ -95,7 +98,7 @@ public class LoginActivity extends Activity{
 	    JSONParser jsonParser = new JSONParser();
 	    
 	    // login url
-	    private static final String url_login = "http://10.0.2.2:1337/android_connect/android_connect/LoginUser.php";
+	    private static final String url_login = "http://offesview.bugs3.com/php/LoginUser.php";
 
 	    // JSON Node names
 	    private static final String TAG_SUCCESS = "success";

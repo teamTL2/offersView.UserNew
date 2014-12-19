@@ -9,9 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,7 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.TextView.OnEditorActionListener;
 
-import com.example.offersview.MainActivity;
 import com.example.offersview.R;
 import com.example.offersview.DAO.JSONParser;
 
@@ -81,9 +78,7 @@ public class RegisterActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				
-				AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(RegisterActivity.this);
-				
+								
 				if (!email.getText().toString().equals("") 
 						&& !password.getText().toString().equals("")
 						&& !rePassword.getText().toString().equals("") 
@@ -92,25 +87,10 @@ public class RegisterActivity extends Activity{
 				} 
 				else if(email.getText().toString().equals("") || password.getText().toString().equals("")
 								|| rePassword.getText().toString().equals("")){
-						alertDialog2.setMessage("Παρακαλώ συμπληρώστε όλα τα πεδία");
-						alertDialog2.setCancelable(true);
-						alertDialog2.setPositiveButton("OK",new DialogInterface.OnClickListener() {
-						            public void onClick(DialogInterface dialog, int which) {
-						            	dialog.cancel();
-						            }
-						        });
-						alertDialog2.show();
-
+	        		Toast.makeText(getApplicationContext(), "Παρακαλώ συμπληρώστε όλα τα πεδία", Toast.LENGTH_SHORT).show();
 				} 
 				else if(!password.getText().toString().equals(rePassword.getText().toString())){
-						alertDialog2.setMessage("Παρακαλώ βεβαιωθείτε πως οι κωδικοί ταιριάζουν");
-						alertDialog2.setCancelable(true);
-						alertDialog2.setPositiveButton("OK",new DialogInterface.OnClickListener() {
-						            public void onClick(DialogInterface dialog, int which) {
-						            	dialog.cancel();
-						            }
-						        });
-						alertDialog2.show();
+	        		Toast.makeText(getApplicationContext(), "Παρακαλώ βεβαιωθείτε πως οι κωδικοί ταιριάζουν", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -125,7 +105,7 @@ public class RegisterActivity extends Activity{
 	    JSONParser jsonParser = new JSONParser();
 	    
 	    // register url
-	    private static final String url_register = "http://10.0.2.2:1337/android_connect/android_connect/CreateUser.php";
+	    private static final String url_register = "http://offesview.bugs3.com/php/CreateUser.php";
 
 	    // JSON Node names
 	    private static final String TAG_SUCCESS = "success";
@@ -190,7 +170,7 @@ public class RegisterActivity extends Activity{
         	{
         		Toast.makeText(getApplicationContext(), "Η εγγραφή σας ολοκληρώθηκε", Toast.LENGTH_SHORT).show();
         		
-        		Intent intetn = new Intent(getApplicationContext(),MainActivity.class);
+        		Intent intetn = new Intent(getApplicationContext(),LoginActivity.class);
         		
         		startActivity(intetn);
         		finish();

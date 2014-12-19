@@ -27,12 +27,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.offersview.activities.RegisterActivity"
+            android:name=".activities.RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
-        
+        <activity
+            android:name="com.example.offersview.activities.ShopListActivity"
+            android:label="@string/title_activity_shop_list" >
+        </activity>
+        <activity
+            android:name="com.example.offersview.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
-	<uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -43,5 +51,5 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.msensis.mymarket.permission.MAPS_RECEIVE" />
-    
+
 </manifest>
