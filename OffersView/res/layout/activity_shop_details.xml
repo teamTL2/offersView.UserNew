@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,10 +8,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.offersview.activities.ShopDetailsActivity" 
 	android:background="@drawable/login_background" >
+
+    
 	
 <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="300dp"/>
+
+<Button
+    android:id="@+id/btnShowShopOffers"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/btnAddFavorites"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="30dp"
+    android:text="Προβολή προσφορών του καταστήματος" />
+
+<Button
+    android:id="@+id/btnAddFavorites"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/btnShowShopOffers"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="16dp"
+    android:text="Προσθήκη καταστήματος στην λίστα αγαπημένων" />
  
-</LinearLayout>
+</RelativeLayout>
