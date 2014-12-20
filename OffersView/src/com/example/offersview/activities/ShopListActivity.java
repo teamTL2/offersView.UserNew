@@ -33,7 +33,11 @@ public class ShopListActivity extends ListActivity {
     private ProgressDialog pDialog;
  
     ArrayList<HashMap<String, String>> shopsList;   
- 
+    // JSON Node names
+    private static final String TAG_SUCCESS = "success";
+	private static final String TAG_SHOPS = "shops";
+    private static final String TAG_SHOP_ID = "Shop_ID";
+    private static final String TAG_NAME = "ShopName";
 
  
     @Override
@@ -44,28 +48,29 @@ public class ShopListActivity extends ListActivity {
         // Hashmap for ListView
         shopsList = new ArrayList<HashMap<String, String>>();
  
-        // Loading products in Background Thread
+        // Loading shops in Background Thread
         new LoadAllShops().execute();
  
         // Get listview
         ListView lv = getListView();
  
-        // on seleting single product
-        // launching Edit Product Screen
-      /*  lv.setOnItemClickListener(new OnItemClickListener() {
+
+        // on selecting single shop
+        // launching shop details screen
+        lv.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
                 // getting values from selected ListItem
-                String pid = ((TextView) view.findViewById(R.id.pid)).getText()
+                String sid = ((TextView) view.findViewById(R.id.id)).getText()
                         .toString();
  
                 // Starting new intent
                 Intent in = new Intent(getApplicationContext(),
-                        EditProductActivity.class);
+                		ShopDetailsActivity.class);
                 // sending pid to next activity
-                in.putExtra(TAG_PID, pid);
+                in.putExtra(TAG_SHOP_ID, sid);
  
                 // starting new activity and expecting some response back
                 startActivityForResult(in, 100);
@@ -74,21 +79,6 @@ public class ShopListActivity extends ListActivity {
  
     }
     
-    	// Response from Edit Product Activity
-    	@Override
-    	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    		super.onActivityResult(requestCode, resultCode, data);
-    		// if result code 100
-    		if (resultCode == 100) {
-    			// if result code 100 is received
-    			// means user edited/deleted product
-    			// reload this screen again
-    			Intent intent = getIntent();
-    			finish();
-    			startActivity(intent);
-    		}*/
- 
-    }
     
     /**
      * Background Async Task to Load all product by making HTTP Request
@@ -97,15 +87,11 @@ public class ShopListActivity extends ListActivity {
     	
         // Creating JSON Parser object
         JSONParser jParser = new JSONParser();
-     // url to get all products list
-        private static final String url_all_shops = "http://10.0.2.2:8080/seleniumTut/GetAllShops.php";
+        // url to get all shops list
+        private static final String url_all_shops = "http://offesview.bugs3.com/php/GetAllShops.php";
      
-        // JSON Node names
-        private static final String TAG_SUCCESS = "success";
-    	private static final String TAG_SHOPS = "Shops";
-        private static final String TAG_SHOP_ID = "Shop_ID";
-        private static final String TAG_NAME = "ShopName";
-        // products JSONArray
+
+        // shops JSONArray
         JSONArray shops = null;
  
         /**
@@ -115,7 +101,7 @@ public class ShopListActivity extends ListActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(ShopListActivity.this);
-            pDialog.setMessage("Loading products. Please wait...");
+            pDialog.setMessage("Loading shops. Please wait...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(false);
             pDialog.show();
@@ -127,6 +113,7 @@ public class ShopListActivity extends ListActivity {
         protected String doInBackground(String... args) {
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
+            
             // getting JSON string from URL
             JSONObject json = jParser.makeHttpRequest(url_all_shops, "POST", params);
  
@@ -138,7 +125,7 @@ public class ShopListActivity extends ListActivity {
                 int success = json.getInt(TAG_SUCCESS);
  
                 if (success == 1) {
-                    // products found
+                    // shops found
                     // Getting Array of Products
                     shops = json.getJSONArray(TAG_SHOPS);
  
@@ -160,16 +147,7 @@ public class ShopListActivity extends ListActivity {
                         // adding HashList to ArrayList
                         shopsList.add(map);
                     }
-                } 
-               /* else {
-                    // no products found
-                    // Launch Add New product Activity
-                    Intent i = new Intent(getApplicationContext(),
-                            NewProductActivity.class);
-                    // Closing all previous activities
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(i);
-                } */
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -181,7 +159,7 @@ public class ShopListActivity extends ListActivity {
          * After completing background task Dismiss the progress dialog
          * **/
         protected void onPostExecute(String file_url) {
-            // dismiss the dialog after getting all products
+            // dismiss the dialog after getting all shops
             pDialog.dismiss();
             // updating UI from Background Thread
             runOnUiThread(new Runnable() {
@@ -193,7 +171,7 @@ public class ShopListActivity extends ListActivity {
                             ShopListActivity.this, shopsList,
                             R.layout.shops_list, new String[] { TAG_SHOP_ID,
                                     TAG_NAME},
-                            new int[] { R.id.pid, R.id.name });
+                            new int[] { R.id.id, R.id.name });
                     // updating listview
                     setListAdapter(adapter);
                 }
@@ -202,5 +180,9 @@ public class ShopListActivity extends ListActivity {
         }
  
     }
+    
+    
+    
+    
 }
     
