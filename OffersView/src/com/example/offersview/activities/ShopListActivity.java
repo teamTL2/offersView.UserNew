@@ -11,7 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.offersview.R;
-import com.example.offersview.DAO.JSONParser;
+import com.example.offersview.logic.JSONParser;
  
 import android.app.ListActivity;
 import android.app.ProgressDialog;

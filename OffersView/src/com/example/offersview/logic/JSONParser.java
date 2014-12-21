@@ -1,4 +1,4 @@
-package com.example.offersview.DAO;
+package com.example.offersview.logic;
  
 import java.io.BufferedReader;
 import java.io.IOException;
