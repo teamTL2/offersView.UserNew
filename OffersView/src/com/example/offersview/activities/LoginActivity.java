@@ -25,7 +25,7 @@ import android.widget.TextView.OnEditorActionListener;
 
 import com.example.offersview.MainActivity;
 import com.example.offersview.R;
-import com.example.offersview.DAO.JSONParser;
+import com.example.offersview.logic.JSONParser;
 
 
 //Login View

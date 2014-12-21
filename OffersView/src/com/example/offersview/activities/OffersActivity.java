@@ -19,7 +19,7 @@ import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 import com.example.offersview.R;
-import com.example.offersview.DAO.JSONParser;
+import com.example.offersview.logic.JSONParser;
 
 public class OffersActivity  extends ListActivity {
 	 
