@@ -25,6 +25,7 @@ import android.widget.TextView.OnEditorActionListener;
 
 import com.example.offersview.MainActivity;
 import com.example.offersview.R;
+import com.example.offersview.logic.DataCheck;
 import com.example.offersview.logic.JSONParser;
 
 
@@ -34,7 +35,9 @@ public class LoginActivity extends Activity{
 	private EditText email,password;
 	private Button button, buttonR;
 	private ProgressDialog pDialog;
+	private boolean isNotEmpty;
 	
+	DataCheck dc;
 	
 	
 	@Override
@@ -77,14 +80,15 @@ public class LoginActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				if (!email.getText().toString().equals("") && !password.getText().toString().equals("")) {
+				dc = new DataCheck(email.getText().toString(),password.getText().toString(),getApplicationContext());
+				
+				isNotEmpty = dc.isNotEmptyLogin();
+				
+				if (isNotEmpty) {
 					
 					new LoginOperation(email.getText().toString(),password.getText().toString()).execute();	
 				}
-				else {
-					
-	        		Toast.makeText(getApplicationContext(), "Παρακαλώ συμπληρώστε όλα τα πεδία", Toast.LENGTH_SHORT).show();
-				}
+				
 
 			}
 		});
@@ -113,7 +117,7 @@ public class LoginActivity extends Activity{
 		
 		@Override
         protected void onPreExecute() {
-        	pDialog.setMessage("Γίνετε ο έλεγχος των στοιχείων...");
+        	pDialog.setMessage("Checking your information... Please wait...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
 			pDialog.show();
@@ -161,7 +165,7 @@ public class LoginActivity extends Activity{
         	//Result Message
         	if(result)
         	{
-        		Toast.makeText(getApplicationContext(), "Καλώς ήρθατε", Toast.LENGTH_SHORT).show();
+        		Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
         		
         		Intent intetn = new Intent(getApplicationContext(),MainActivity.class);
         		
@@ -169,7 +173,7 @@ public class LoginActivity extends Activity{
         		finish();
         	}
         	else
-        		Toast.makeText(getApplicationContext(), "Τα στοιχεία είναι λάθος", Toast.LENGTH_SHORT).show();
+        		Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
         }
 
     }

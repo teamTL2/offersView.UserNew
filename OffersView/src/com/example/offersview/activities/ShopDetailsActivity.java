@@ -113,7 +113,7 @@ public class ShopDetailsActivity  extends ListActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(ShopDetailsActivity.this);
-            pDialog.setMessage("Loading info. Please wait...");
+            pDialog.setMessage("Loading information. Please wait...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(false);
             pDialog.show();
