@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="130dp"
-        android:text="Εμφάνιση λίστας καταστημάτων" />
+        android:text="Display the list of the nearest shops" />
 
     <Button
         android:id="@+id/btnViewFavorites"
@@ -25,6 +25,6 @@
         android:layout_alignLeft="@+id/btnViewShops"
         android:layout_alignTop="@+id/btnViewShops"
         android:layout_marginTop="63dp"
-        android:text="Εμφάνιση λίστας αγαπημένων" />
+        android:text="Display the list of your favorite shops" />
 	
 </RelativeLayout>

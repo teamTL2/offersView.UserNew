@@ -25,6 +25,7 @@ import android.widget.Toast;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.example.offersview.R;
+import com.example.offersview.logic.DataCheck;
 import com.example.offersview.logic.JSONParser;
 
 
@@ -34,7 +35,9 @@ public class RegisterActivity extends Activity{
 	private EditText email,password,rePassword;
 	private Button button,buttonReturn;
 	private ProgressDialog pDialog;
+	private Boolean isCheckPassed = false;
 	
+	DataCheck dc;
 
     
 	@Override
@@ -77,21 +80,16 @@ public class RegisterActivity extends Activity{
 
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-								
-				if (!email.getText().toString().equals("") 
-						&& !password.getText().toString().equals("")
-						&& !rePassword.getText().toString().equals("") 
-						&&	password.getText().toString().equals(rePassword.getText().toString())){
+				// TODO Auto-generated method stub		
+				
+				dc = new DataCheck(email.getText().toString(),password.getText().toString(),rePassword.getText().toString(),getApplicationContext());
+				
+				isCheckPassed = dc.isCheckPassed();
+				
+				if (isCheckPassed){
 					new RegisterOperation(email.getText().toString(),password.getText().toString()).execute();
-				} 
-				else if(email.getText().toString().equals("") || password.getText().toString().equals("")
-								|| rePassword.getText().toString().equals("")){
-	        		Toast.makeText(getApplicationContext(), "Παρακαλώ συμπληρώστε όλα τα πεδία", Toast.LENGTH_SHORT).show();
-				} 
-				else if(!password.getText().toString().equals(rePassword.getText().toString())){
-	        		Toast.makeText(getApplicationContext(), "Παρακαλώ βεβαιωθείτε πως οι κωδικοί ταιριάζουν", Toast.LENGTH_SHORT).show();
 				}
+					
 			}
 		});
 	
@@ -120,7 +118,7 @@ public class RegisterActivity extends Activity{
 		
 		@Override
         protected void onPreExecute() {
-        	pDialog.setMessage("Γίνεται ο έλεγχος των στοιχείων...");
+        	pDialog.setMessage("Checking your information... Please wait...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(true);
 			pDialog.show();
@@ -168,7 +166,7 @@ public class RegisterActivity extends Activity{
         	//Result Message
         	if(result)
         	{
-        		Toast.makeText(getApplicationContext(), "Η εγγραφή σας ολοκληρώθηκε", Toast.LENGTH_SHORT).show();
+        		Toast.makeText(getApplicationContext(), "Registration completed", Toast.LENGTH_SHORT).show();
         		
         		Intent intetn = new Intent(getApplicationContext(),LoginActivity.class);
         		
@@ -176,7 +174,7 @@ public class RegisterActivity extends Activity{
         		finish();
         	}
         	else
-        		Toast.makeText(getApplicationContext(), "Η εγγραφή απέτυχε", Toast.LENGTH_SHORT).show();
+        		Toast.makeText(getApplicationContext(), "Registration failed", Toast.LENGTH_SHORT).show();
         }
 
     }
