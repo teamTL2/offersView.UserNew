@@ -30,7 +30,6 @@ public class DataCheck {
    public boolean isNotEmptyLogin(){
     	
     	if (email.equals("") || password.equals("")){
-    		Toast.makeText(c, "Please make sure to fill all the fields", Toast.LENGTH_SHORT).show();
     		return false;
     	}
     	else
@@ -83,11 +82,11 @@ public class DataCheck {
         boolean symbols = isSymbolsNotUsed();
         
     	if (!empty){
-    		Toast.makeText(c, "Please make sure to fill all the fields", Toast.LENGTH_SHORT).show();
+    		Toast.makeText(c, "Please make sure you fill in all required fields", Toast.LENGTH_SHORT).show();
     		return false;
     	}
         else if(!match){
-    		Toast.makeText(c, "Please make sure that passwords match", Toast.LENGTH_SHORT).show();
+    		Toast.makeText(c, "Please make sure that your passwords match", Toast.LENGTH_SHORT).show();
     		return false;
         }
         else if(!symbols){

@@ -2,6 +2,7 @@ package com.example.offersview;
 
 
 import com.example.offersview.R;
+import com.example.offersview.activities.NearestShopsActivity;
 import com.example.offersview.activities.ShopListActivity;
 
 import android.app.Activity;
@@ -13,7 +14,8 @@ import android.widget.Button;
 public class MainActivity extends Activity{
  
     Button btnViewShops;
- 
+    Button btnViewNearestShops;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,14 +23,28 @@ public class MainActivity extends Activity{
  
         // Buttons
         btnViewShops = (Button) findViewById(R.id.btnViewShops);
- 
-        // view products click event
+        btnViewNearestShops = (Button) findViewById(R.id.btnViewNearestShops);
+        
+        
+        // view all shops click event
         btnViewShops.setOnClickListener(new View.OnClickListener() {
  
             @Override
             public void onClick(View view) {
-                // Launching All products Activity
+                // Launching All shops Activity
                 Intent i = new Intent(getApplicationContext(), ShopListActivity.class);
+                startActivity(i);
+ 
+            }
+        });
+        
+        
+        btnViewNearestShops.setOnClickListener(new View.OnClickListener() {
+        	 
+            @Override
+            public void onClick(View view) {
+                // Launching Nearest Shops Activity
+                Intent i = new Intent(getApplicationContext(), NearestShopsActivity.class);
                 startActivity(i);
  
             }
