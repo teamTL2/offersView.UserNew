@@ -11,5 +11,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_shop_details">ShopDetailsActivity</string>
     <string name="title_activity_offers">OffersActivity</string>
+    <string name="title_activity_nearest_shops">NearestShopsActivity</string>
 
 </resources>

@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="130dp"
-        android:text="Display the list of the nearest shops" />
+        android:text="Display the list of all shops" />
 
     <Button
         android:id="@+id/btnViewFavorites"
@@ -26,5 +26,15 @@
         android:layout_alignTop="@+id/btnViewShops"
         android:layout_marginTop="63dp"
         android:text="Display the list of your favorite shops" />
+
+    <Button
+        android:id="@+id/btnViewNearestShops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnViewShops"
+        android:layout_alignLeft="@+id/btnViewShops"
+        android:layout_alignRight="@+id/btnViewShops"
+        android:layout_marginBottom="16dp"
+        android:text="Display the list of the nearest shops" />
 	
 </RelativeLayout>

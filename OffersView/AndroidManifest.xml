@@ -43,8 +43,12 @@
             android:label="@string/title_activity_shop_details" >
         </activity>
         <activity
-            android:name="com.example.offersview.activities.OffersActivity"
+            android:name=".activities.OffersActivity"
             android:label="@string/title_activity_offers" >
+        </activity>
+        <activity
+            android:name="com.example.offersview.activities.NearestShopsActivity"
+            android:label="@string/title_activity_nearest_shops" >
         </activity>
     </application>
 

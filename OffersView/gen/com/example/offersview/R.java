@@ -1638,9 +1638,9 @@ containing a value of this type.
         public static final int splash=0x7f020036;
     }
     public static final class id {
-        public static final int Re_Register_password=0x7f09004a;
-        public static final int Register_email=0x7f090047;
-        public static final int Register_password=0x7f090048;
+        public static final int Re_Register_password=0x7f09004b;
+        public static final int Register_email=0x7f090048;
+        public static final int Register_password=0x7f090049;
         public static final int action_bar=0x7f090031;
         public static final int action_bar_activity_content=0x7f090003;
         public static final int action_bar_container=0x7f090030;
@@ -1654,17 +1654,18 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002e;
         public static final int action_mode_bar_stub=0x7f09002d;
         public static final int action_mode_close_button=0x7f090020;
-        public static final int action_settings=0x7f090054;
+        public static final int action_settings=0x7f090055;
         public static final int activity_chooser_view_content=0x7f090021;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
-        public static final int btnAddFavorites=0x7f09004d;
+        public static final int btnAddFavorites=0x7f09004e;
         public static final int btnLogin=0x7f090044;
         public static final int btnNewUser=0x7f090040;
-        public static final int btnRegister=0x7f090049;
-        public static final int btnReturn=0x7f09004b;
-        public static final int btnShowShopOffers=0x7f09004c;
+        public static final int btnRegister=0x7f09004a;
+        public static final int btnReturn=0x7f09004c;
+        public static final int btnShowShopOffers=0x7f09004d;
         public static final int btnViewFavorites=0x7f090046;
+        public static final int btnViewNearestShops=0x7f090047;
         public static final int btnViewShops=0x7f090045;
         public static final int checkbox=0x7f090029;
         public static final int collapseActionView=0x7f090015;
@@ -1674,14 +1675,14 @@ containing a value of this type.
         public static final int disableHome=0x7f09000d;
         public static final int dropdown=0x7f09001a;
         public static final int edit_query=0x7f090033;
-        public static final int email=0x7f090052;
+        public static final int email=0x7f090053;
         public static final int end=0x7f09001c;
         public static final int expand_activities_button=0x7f090022;
         public static final int expanded_menu=0x7f090028;
         public static final int home=0x7f090000;
         public static final int homeAsUp=0x7f09000e;
         public static final int icon=0x7f090026;
-        public static final int id=0x7f09004e;
+        public static final int id=0x7f09004f;
         public static final int ifRoom=0x7f090016;
         public static final int image=0x7f090023;
         public static final int imageView1=0x7f09003f;
@@ -1691,12 +1692,12 @@ containing a value of this type.
         public static final int login_edit_password=0x7f090043;
         public static final int login_email=0x7f090042;
         public static final int middle=0x7f09001d;
-        public static final int name=0x7f09004f;
+        public static final int name=0x7f090050;
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
-        public static final int offer=0x7f090053;
-        public static final int phone=0x7f090051;
+        public static final int offer=0x7f090054;
+        public static final int phone=0x7f090052;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09002b;
@@ -1715,7 +1716,7 @@ containing a value of this type.
         public static final int showHome=0x7f090011;
         public static final int showTitle=0x7f090012;
         public static final int split_action_bar=0x7f090004;
-        public static final int street=0x7f090050;
+        public static final int street=0x7f090051;
         public static final int submit_area=0x7f09003c;
         public static final int tabMode=0x7f09000c;
         public static final int title=0x7f090027;
@@ -1775,24 +1776,26 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_login=0x7f030017;
         public static final int activity_main=0x7f030018;
-        public static final int activity_offers=0x7f030019;
-        public static final int activity_register=0x7f03001a;
-        public static final int activity_shop_details=0x7f03001b;
-        public static final int activity_shop_list=0x7f03001c;
-        public static final int activity_splash=0x7f03001d;
-        public static final int details_list=0x7f03001e;
-        public static final int offers_list=0x7f03001f;
-        public static final int shops_list=0x7f030020;
-        public static final int support_simple_spinner_dropdown_item=0x7f030021;
+        public static final int activity_nearest_shops=0x7f030019;
+        public static final int activity_offers=0x7f03001a;
+        public static final int activity_register=0x7f03001b;
+        public static final int activity_shop_details=0x7f03001c;
+        public static final int activity_shop_list=0x7f03001d;
+        public static final int activity_splash=0x7f03001e;
+        public static final int details_list=0x7f03001f;
+        public static final int offers_list=0x7f030020;
+        public static final int shops_list=0x7f030021;
+        public static final int support_simple_spinner_dropdown_item=0x7f030022;
     }
     public static final class menu {
         public static final int login=0x7f0c0000;
         public static final int main=0x7f0c0001;
-        public static final int offers=0x7f0c0002;
-        public static final int register=0x7f0c0003;
-        public static final int shop_details=0x7f0c0004;
-        public static final int shop_list=0x7f0c0005;
-        public static final int splash=0x7f0c0006;
+        public static final int nearest_shops=0x7f0c0002;
+        public static final int offers=0x7f0c0003;
+        public static final int register=0x7f0c0004;
+        public static final int shop_details=0x7f0c0005;
+        public static final int shop_list=0x7f0c0006;
+        public static final int splash=0x7f0c0007;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1856,6 +1859,7 @@ containing a value of this type.
         public static final int hello_world=0x7f0a0011;
         public static final int title_activity_login=0x7f0a0014;
         public static final int title_activity_main=0x7f0a0017;
+        public static final int title_activity_nearest_shops=0x7f0a001a;
         public static final int title_activity_offers=0x7f0a0019;
         public static final int title_activity_register=0x7f0a0015;
         public static final int title_activity_shop_details=0x7f0a0018;
