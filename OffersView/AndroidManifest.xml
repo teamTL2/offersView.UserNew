@@ -55,6 +55,11 @@
             android:name="com.example.offersview.activities.NearestShopsActivity"
             android:label="@string/title_activity_nearest_shops" >
         </activity>
+         <activity
+            android:name="com.example.offersview.activities.MapViewActivity"
+            android:label="@string/title_activity_nearest_shops" >
+        </activity>
+       
          <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAyYzPhY2eEUOWehb68HCudkLtVLFZqazs" />

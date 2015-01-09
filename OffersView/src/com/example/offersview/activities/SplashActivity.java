@@ -1,13 +1,13 @@
 package com.example.offersview.activities;
 
-import com.example.offersview.R;
-import com.example.offersview.logic.ConnectionDetector;
-import com.example.offersview.logic.GPSDetector;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.offersview.R;
+import com.example.offersview.logic.ConnectionDetector;
+import com.example.offersview.logic.GPSDetector;
 // splash screen
 public class SplashActivity extends Activity{
 	
