@@ -1,14 +1,15 @@
 package com.example.offersview;
 
 
+import com.example.offersview.R;
+import com.example.offersview.activities.NearestShopsActivity;
+import com.example.offersview.activities.ShopListActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.offersview.activities.NearestShopsActivity;
-import com.example.offersview.activities.ShopListActivity;
  
 public class MainActivity extends Activity{
  

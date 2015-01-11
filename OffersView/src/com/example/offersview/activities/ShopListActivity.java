@@ -4,12 +4,15 @@ package com.example.offersview.activities;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+ 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.offersview.R;
+import com.example.offersview.logic.JSONParser;
+ 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -23,9 +26,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-
-import com.example.offersview.R;
-import com.example.offersview.logic.JSONParser;
  
 public class ShopListActivity extends ListActivity {
  
