@@ -2,9 +2,7 @@ package com.example.offersview.activities;
 
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.example.offersview.R;
@@ -32,30 +30,9 @@ public class MapViewActivity extends ActionBarActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activitiy_mapview);
 		
-		ActionBar actionbar = getSupportActionBar();
-		actionbar.setHomeButtonEnabled(true);
-		actionbar.setDisplayHomeAsUpEnabled(true);
-		actionbar.setTitle("Maps");
-//		actionbar.
 		
-		mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-		map = mapFragment.getMap();
-		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 		
 	}
-	
-	
-	@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        case android.R.id.home:
-        // I do not want this... 
-        // Home as up button is to navigate to Home-Activity not previous acitivity
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 	
 }
 

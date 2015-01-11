@@ -1798,9 +1798,9 @@ containing a value of this type.
         public static final int splash=0x7f020052;
     }
     public static final class id {
-        public static final int Re_Register_password=0x7f0a0050;
-        public static final int Register_email=0x7f0a004d;
-        public static final int Register_password=0x7f0a004e;
+        public static final int Re_Register_password=0x7f0a004f;
+        public static final int Register_email=0x7f0a004c;
+        public static final int Register_password=0x7f0a004d;
         public static final int action_bar=0x7f0a0034;
         public static final int action_bar_activity_content=0x7f0a0003;
         public static final int action_bar_container=0x7f0a0033;
@@ -1814,17 +1814,16 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a0031;
         public static final int action_mode_bar_stub=0x7f0a0030;
         public static final int action_mode_close_button=0x7f0a0023;
-        public static final int action_settings=0x7f0a005a;
+        public static final int action_settings=0x7f0a0059;
         public static final int activity_chooser_view_content=0x7f0a0024;
         public static final int always=0x7f0a0017;
         public static final int beginning=0x7f0a001e;
-        public static final int btnAddFavorites=0x7f0a0053;
+        public static final int btnAddFavorites=0x7f0a0052;
         public static final int btnLogin=0x7f0a0048;
-        public static final int btnMapViewNearestShops=0x7f0a004c;
         public static final int btnNewUser=0x7f0a0044;
-        public static final int btnRegister=0x7f0a004f;
-        public static final int btnReturn=0x7f0a0051;
-        public static final int btnShowShopOffers=0x7f0a0052;
+        public static final int btnRegister=0x7f0a004e;
+        public static final int btnReturn=0x7f0a0050;
+        public static final int btnShowShopOffers=0x7f0a0051;
         public static final int btnViewFavorites=0x7f0a004a;
         public static final int btnViewNearestShops=0x7f0a004b;
         public static final int btnViewShops=0x7f0a0049;
@@ -1836,7 +1835,7 @@ containing a value of this type.
         public static final int disableHome=0x7f0a0011;
         public static final int dropdown=0x7f0a001d;
         public static final int edit_query=0x7f0a0036;
-        public static final int email=0x7f0a0058;
+        public static final int email=0x7f0a0057;
         public static final int end=0x7f0a001f;
         public static final int expand_activities_button=0x7f0a0025;
         public static final int expanded_menu=0x7f0a002b;
@@ -1844,7 +1843,7 @@ containing a value of this type.
         public static final int homeAsUp=0x7f0a0012;
         public static final int hybrid=0x7f0a0009;
         public static final int icon=0x7f0a0029;
-        public static final int id=0x7f0a0054;
+        public static final int id=0x7f0a0053;
         public static final int ifRoom=0x7f0a0019;
         public static final int image=0x7f0a0026;
         public static final int imageView1=0x7f0a0043;
@@ -1855,12 +1854,12 @@ containing a value of this type.
         public static final int login_email=0x7f0a0046;
         public static final int map=0x7f0a0042;
         public static final int middle=0x7f0a0020;
-        public static final int name=0x7f0a0055;
+        public static final int name=0x7f0a0054;
         public static final int never=0x7f0a001a;
         public static final int none=0x7f0a000a;
         public static final int normal=0x7f0a000b;
-        public static final int offer=0x7f0a0059;
-        public static final int phone=0x7f0a0057;
+        public static final int offer=0x7f0a0058;
+        public static final int phone=0x7f0a0056;
         public static final int progress_circular=0x7f0a0007;
         public static final int progress_horizontal=0x7f0a0008;
         public static final int radio=0x7f0a002e;
@@ -1880,7 +1879,7 @@ containing a value of this type.
         public static final int showHome=0x7f0a0014;
         public static final int showTitle=0x7f0a0015;
         public static final int split_action_bar=0x7f0a0004;
-        public static final int street=0x7f0a0056;
+        public static final int street=0x7f0a0055;
         public static final int submit_area=0x7f0a003f;
         public static final int tabMode=0x7f0a0010;
         public static final int terrain=0x7f0a000d;
