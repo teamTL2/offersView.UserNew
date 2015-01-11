@@ -21,6 +21,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
+
 import com.example.offersview.R;
 import com.example.offersview.logic.JSONParser;
 

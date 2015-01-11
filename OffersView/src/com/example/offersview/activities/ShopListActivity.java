@@ -4,15 +4,12 @@ package com.example.offersview.activities;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
- 
+
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.example.offersview.R;
-import com.example.offersview.logic.JSONParser;
- 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -26,7 +23,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.offersview.R;
+import com.example.offersview.logic.JSONParser;
  
 public class ShopListActivity extends ListActivity {
  
@@ -66,9 +65,7 @@ public class ShopListActivity extends ListActivity {
                 // getting values from selected ListItem
                 String sid = ((TextView) view.findViewById(R.id.id)).getText()
                         .toString();
-                if(sid == "not"){
-                	Toast.makeText(getApplicationContext(), "There are no shops" , Toast.LENGTH_SHORT).show();
-                }else{
+ 
                 // Starting new intent
                 Intent in = new Intent(getApplicationContext(),
                 		ShopDetailsActivity.class);
@@ -77,7 +74,6 @@ public class ShopListActivity extends ListActivity {
  
                 // starting new activity and expecting some response back
                 startActivityForResult(in, 100);
-                }
             }
         });
  
@@ -151,12 +147,6 @@ public class ShopListActivity extends ListActivity {
                         // adding HashList to ArrayList
                         shopsList.add(map);
                     }
-                }else{
-                	// creating new HashMap
-                    HashMap<String, String> map = new HashMap<String, String>();
-                    map.put(TAG_SHOP_ID, "not");
-                    map.put(TAG_NAME, "There are no shops");
-                    shopsList.add(map);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

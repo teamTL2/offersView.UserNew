@@ -9,6 +9,10 @@
     tools:context="com.example.offersview.MainActivity"
 	android:background="@drawable/login_background" >
 
+    
+    
+    
+    
     <Button
         android:id="@+id/btnViewShops"
         android:layout_width="200dp"
@@ -36,5 +40,15 @@
         android:layout_alignRight="@+id/btnViewShops"
         android:layout_marginBottom="16dp"
         android:text="Display the list of the nearest shops" />
+    
+     <Button
+        android:id="@+id/btnMapViewNearestShops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnViewNearestShops"
+        android:layout_alignLeft="@+id/btnViewShops"
+        android:layout_alignRight="@+id/btnViewShops"
+        android:layout_marginBottom="16dp"
+        android:text="Display in Map the nearest shops" />
 	
 </RelativeLayout>
