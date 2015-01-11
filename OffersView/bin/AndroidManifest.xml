@@ -51,11 +51,11 @@
             android:label="@string/title_activity_offers" >
         </activity>
         <activity
-            android:name="com.example.offersview.activities.NearestShopsActivity"
+            android:name=".activities.NearestShopsActivity"
             android:label="@string/title_activity_nearest_shops" >
         </activity>
         <activity
-            android:name="com.example.offersview.activities.MapViewActivity"
+            android:name=".activities.MapViewActivity"
             android:label="@string/title_activity_nearest_shops"
             android:theme="@style/Theme.AppCompat.Light" >
         </activity>
@@ -63,6 +63,11 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAyYzPhY2eEUOWehb68HCudkLtVLFZqazs" />
+
+        <activity
+            android:name="com.example.offersview.activities.FavouritesListActivity"
+            android:label="@string/title_activity_favourites_list" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
