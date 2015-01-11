@@ -17,21 +17,29 @@
         android:layout_height="300dp"/>
 
 <Button
+    android:id="@+id/btnAddFavorites"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/rmFav"
+    android:layout_alignLeft="@+id/btnShowShopOffers"
+    android:text="Προσθήκη καταστήματος στην λίστα αγαπημένων" />
+
+<Button
     android:id="@+id/btnShowShopOffers"
     android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:layout_above="@+id/btnAddFavorites"
     android:layout_centerHorizontal="true"
-    android:layout_marginBottom="30dp"
-    android:text="Display shop's offers" />
+    android:text="Προβολή προσφορών του καταστήματος" />
 
 <Button
-    android:id="@+id/btnAddFavorites"
-    android:layout_width="200dp"
+    android:id="@+id/rmFav"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignLeft="@+id/btnShowShopOffers"
     android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
     android:layout_marginBottom="16dp"
-    android:text="Add this shop to my favorites list" />
+    android:backgroundTint="@android:color/holo_red_dark"
+    android:text="Διαγραφή Αγαπημένου" />
  
 </RelativeLayout>

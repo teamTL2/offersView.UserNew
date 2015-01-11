@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.example.offersview.activities.MapViewActivity;
+import com.example.offersview.activities.FavouritesListActivity;
 import com.example.offersview.activities.NearestShopsActivity;
 import com.example.offersview.activities.ShopListActivity;
  
 public class MainActivity extends Activity{
  
-    Button btnViewShops;
+    Button btnViewShops, btnShowFav;
     Button btnViewNearestShops;
     Button btnMapViewNearestShops;
     
@@ -27,7 +27,7 @@ public class MainActivity extends Activity{
         btnViewShops = (Button) findViewById(R.id.btnViewShops);
         btnViewNearestShops = (Button) findViewById(R.id.btnViewNearestShops);
         btnMapViewNearestShops = (Button) findViewById(R.id.btnMapViewNearestShops);
-        
+        btnShowFav = (Button) findViewById(R.id.btnViewFavorites);
         // view all shops click event
         btnViewShops.setOnClickListener(new View.OnClickListener() {
  
@@ -40,12 +40,13 @@ public class MainActivity extends Activity{
             }
         });
         
-        btnMapViewNearestShops.setOnClickListener( new OnClickListener() {
+     // view favourites click event
+        btnShowFav.setOnClickListener(new OnClickListener() {
 			
-			@Override
-			public void onClick(View v) {
-				 Intent i = new Intent(getApplicationContext(), MapViewActivity.class);
-	                startActivity(i);
+			public void onClick(View view) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(getApplicationContext(), FavouritesListActivity.class);
+                startActivity(i);
 			}
 		});
         

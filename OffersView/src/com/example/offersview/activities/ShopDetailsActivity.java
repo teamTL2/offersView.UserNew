@@ -29,9 +29,9 @@ public class ShopDetailsActivity  extends ListActivity {
 	 
 	// Progress Dialog
     private ProgressDialog pDialog;
-    private Button buttonFav, buttonOffers;
-    
-    String sid;
+    private Button buttonFav, buttonOffers, buttonRmFav;
+    JSONParser jParser = new JSONParser();
+    String sid, uid;
     
     ArrayList<HashMap<String, String>> detailsList; 
 	
@@ -48,6 +48,7 @@ public class ShopDetailsActivity  extends ListActivity {
         setContentView(R.layout.activity_shop_details);
         
         buttonFav = (Button) findViewById(R.id.btnAddFavorites);
+        buttonRmFav = (Button) findViewById(R.id.rmFav);
 		buttonOffers = (Button) findViewById(R.id.btnShowShopOffers);
         
         Intent i = getIntent();
@@ -62,13 +63,29 @@ public class ShopDetailsActivity  extends ListActivity {
         
         buttonFav.setOnClickListener(new OnClickListener() {
 
+        	//Get the user id
+			int userID = LoginActivity.uid;
+
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				//
-				//
+
+				uid = String.valueOf(userID);
+				jParser.addFavorite(sid, uid);
 			}
 		});
+        
+        buttonRmFav.setOnClickListener(new OnClickListener() {
+
+			//Get the user id
+			int userID = LoginActivity.uid;
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				uid = String.valueOf(userID);
+				jParser.removeFavouirte(sid, uid);
+			}
+		});//end removeFavourite click Listener
         
         buttonOffers.setOnClickListener(new OnClickListener() {
         

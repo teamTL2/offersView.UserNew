@@ -36,6 +36,7 @@ public class LoginActivity extends Activity{
 	private Button button, buttonR;
 	private ProgressDialog pDialog;
 	private boolean isNotEmpty;
+	public static int uid;
 	
 	DataCheck dc;
 	
@@ -140,6 +141,7 @@ public class LoginActivity extends Activity{
         		// Note that user details url will use GET request
         		JSONObject json = jsonParser.makeHttpRequest(
                     url_login, "POST", params);
+        			uid = json.getInt("userID");
 
         		
 
